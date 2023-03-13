@@ -21,8 +21,6 @@ const idAudio = `#som_${instrumento}`;
         tocaSom(idAudio)
     };
 
-    contador = contador + 1;
-
     console.log(contador);
 
 }
