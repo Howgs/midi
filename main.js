@@ -25,11 +25,9 @@ const idAudio = `#som_${instrumento}`;
 
     tecla.onkeydown = function(evento) {
 
-        if (evento.code === 'Space')
+        if (evento.code === 'Space' || evento.code === 'Enter')
         tecla.classList.add('ativa');
         
-        if (evento.code === 'Enter')
-        tecla.classList.add('ativa');
     }
     tecla.onkeyup = function() {
         tecla.classList.remove('ativa')
