@@ -12,17 +12,26 @@ const tecla = listaDeTeclas[contador];
 //classList é a lista que podemos acessar dentro de um elemento da lista, ex: "Lista[1].classlist"
 const instrumento = tecla.classList[1];
 
-console.log(instrumento)
+//console.log(instrumento)
 
 //tamplete String
 const idAudio = `#som_${instrumento}`;
 
     tecla.onclick = function () {
-        tocaSom(idAudio)
-    };
+        tocaSom(idAudio);
+    }
 
-    console.log(contador);
+    //console.log(contador);
+
+    tecla.onkeydown = function(evento) {
+        console.log(evento.code === 'Space')
+        
+        if (evento.code === 'Space')
+        tecla.classList.add('ativa');
+    }
+    tecla.onkeyup = function() {
+        tecla.classList.remove('ativa')
+    }
 
 }
-
 
